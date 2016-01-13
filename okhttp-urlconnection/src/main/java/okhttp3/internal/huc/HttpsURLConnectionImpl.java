@@ -67,15 +67,15 @@ public final class HttpsURLConnectionImpl extends DelegatingHttpsURLConnection {
     return delegate.client.sslSocketFactory();
   }
 
-  @Override public long getContentLengthLong() {
-    return delegate.getContentLengthLong();
+  public long getContentLengthLong() {
+    throw new UnsupportedOperationException();
   }
 
   @Override public void setFixedLengthStreamingMode(long contentLength) {
     delegate.setFixedLengthStreamingMode(contentLength);
   }
 
-  @Override public long getHeaderFieldLong(String field, long defaultValue) {
-    return delegate.getHeaderFieldLong(field, defaultValue);
+  public long getHeaderFieldLong(String field, long defaultValue) {
+    throw new UnsupportedOperationException();
   }
 }
